@@ -7,13 +7,16 @@ from astropy.coordinates import EarthLocation, SkyCoord, AltAz, ICRS
 from astropy.time import Time
 from astropy import units as u
 
-def get_here():
-    penn_state_harrisburg = EarthLocation(40.2042 * u.degree, lon=-(76.7452 * u.degree))
-    return penn_state_harrisburg
-
-def get_now():
-    current_time = datetime.datetime.utcnow()
-    return current_time
+# Basic function:
+# latitude, longitude, azimuth etc should be of the form 123.4 * astropy.units.degree
+# height like 38 * astropy.units.meter
+# time like datetime.datetime.utcnow() (datetime like the python library)
+# The return value has .ra and .dec parameters containing the right ascension and declination.
+def alt_az_to_equatorial(latitude, longitude, height, altitude, azimuth, time):
+    location = EarthLocation(lat=latitude, lon=longitude, height=height)
+    obstime = Time(time, scale='utc')
+    point = AltAz(az=azimuth, alt=altitude, obstime=obstime, location=location)
+    return point.transform_to(ICRS)
 
 def sirius_alt_az_to_equatorial_example():
     print('Computing the location of Sirius...')
