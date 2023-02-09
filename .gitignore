@@ -2,4 +2,5 @@ secrets.json
 next.txt
 __pycache__
 load_secret.py
+*.swp
 
