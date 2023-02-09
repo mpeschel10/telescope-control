@@ -1,0 +1,24 @@
+[
+{
+    "name": "Sirius 1",
+    "time": "2023-02-08T23:12:01",
+    "latitude": "48d51m36s",
+    "longitude": "2d20m24s",
+    "height": "38",
+    "az": "208d09m59s",
+    "alt": "19d57m08s",
+    "ra": "6h45m7.9s",
+    "de": "-16d43m27.5s"
+},
+{
+    "name": "Capella 1",
+    "time": "2023-02-08T23:12:01",
+    "latitude": "48d51m36s",
+    "longitude": "2d20m24s",
+    "height": "38",
+    "az": "284d14m15s",
+    "alt": "56d57m56s",
+    "ra": "5h16m41.7s",
+    "de": "45d59m42.5s"
+}
+]
